@@ -24,21 +24,15 @@ RSpec.describe 'As a visitor', type: :feature do
       expect(page).to have_content(harry.house)
       expect(malfoy.name).to appear_before(harry.name)
     end
-    
-    it 'I see a list of students with name, age and house' do
+
+    it 'I see students average age' do
       harry = Student.create(name: "Harry Potter" , age: 11 , house: "Gryffindor" )
+      malfoy = Student.create(name: "Draco Malfoy" , age: 12 , house: "Slytherin" )
 
-      dod = Course.create(name:"Defense of the dark arts")
-      potions = Course.create(name:"Potions")
 
-      StudentCourse.create(student_id: harry.id, course_id: dod.id)
-      StudentCourse.create(student_id: harry.id, course_id: potions.id)
+      visit "/students"
 
-      visit "/students/#{harry.id}"
-
-      
-      expect(page).to have_content("Defense of the dark arts")
-      expect(page).to have_content("Potions")
+      expect(page).to have_content(Student.average_age.round(1))
     end
   end
 end

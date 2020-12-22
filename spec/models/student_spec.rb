@@ -13,7 +13,7 @@ RSpec.describe Student, type: :model do
     it {should have_many(:courses).through(:student_courses)}
   end
 
-  describe 'instance methods' do
+  describe 'class methods' do
     it 'self.alphabetize' do 
     harry = Student.create(name: "Harry Potter" , age: 11 , house: "Gryffindor" )
     malfoy = Student.create(name: "Draco Malfoy" , age: 12 , house: "Slytherin" )
@@ -27,6 +27,13 @@ RSpec.describe Student, type: :model do
 
     expect(dod.students_per_course).to eq(1)
     expect(potions.students_per_course).to eq(2)
+    end
+    
+    it 'self.alphabetize' do 
+    harry = Student.create(name: "Harry Potter" , age: 11 , house: "Gryffindor" )
+    malfoy = Student.create(name: "Draco Malfoy" , age: 12 , house: "Slytherin" )
+  
+    expect(Student.average_age).to eq(11.5)
     end
   end
 end

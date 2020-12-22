@@ -7,5 +7,4 @@ Rails.application.routes.draw do
 
   #Courses
   get "/courses", to: "courses#index"
-  get "courses/:id", to: "courses#show", as: :courses_show
 end

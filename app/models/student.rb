@@ -6,4 +6,8 @@ class Student < ApplicationRecord
   def self.alphabetize
     order(:name)
   end
+
+  def self.average_age
+    average(:age)
+  end
 end
