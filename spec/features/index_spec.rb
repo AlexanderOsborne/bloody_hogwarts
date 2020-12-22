@@ -33,10 +33,11 @@ RSpec.describe 'As a visitor', type: :feature do
       StudentCourse.create(student_id: harry.id, course_id: dod.id)
       StudentCourse.create(student_id: harry.id, course_id: potions.id)
 
-      visit '/students/#{harry.id}'
+      visit "/students/#{harry.id}"
 
-      expect(page).to have_content(harry.name)
-      expect(page).to have_content(harry.courses)
+      
+      expect(page).to have_content("Defense of the dark arts")
+      expect(page).to have_content("Potions")
     end
   end
 end
