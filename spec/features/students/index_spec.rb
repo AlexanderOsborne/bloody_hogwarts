@@ -22,11 +22,9 @@ RSpec.describe 'As a visitor', type: :feature do
       expect(page).to have_content(malfoy.age)
       expect(page).to have_content(malfoy.house)
       expect(page).to have_content(harry.house)
-      expect(harry.name).to appear_before(malfoy.name)
-      expect(harry.house).to appear_before(malfoy.house)
-      expect(harry.age).to appear_before(malfoy.age)
-
+      expect(malfoy.name).to appear_before(harry.name)
     end
+    
     it 'I see a list of students with name, age and house' do
       harry = Student.create(name: "Harry Potter" , age: 11 , house: "Gryffindor" )
 
