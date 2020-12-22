@@ -4,4 +4,8 @@ Rails.application.routes.draw do
   #Students
   get "/students", to: "students#index"
   get "students/:id", to: "students#show", as: :students_show
+
+  #Courses
+  get "/courses", to: "courses#index"
+  get "courses/:id", to: "courses#show", as: :courses_show
 end
