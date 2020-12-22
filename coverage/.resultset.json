@@ -219,6 +219,53 @@
           null
         ]
       },
+      "/Users/alexosborne/turing/mod_2/practice/bloody_hogwarts/spec/features/students/index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/alexosborne/turing/mod_2/practice/bloody_hogwarts/spec/models/course_spec.rb": {
         "lines": [
           1,
@@ -330,6 +377,6 @@
         ]
       }
     },
-    "timestamp": 1608664764
+    "timestamp": 1608665059
   }
 }
